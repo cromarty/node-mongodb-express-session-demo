@@ -1,0 +1,15 @@
+
+h1 Log in to the expression-session Demo
+// authentication login form
+div(class='main')
+  div(class='w3')
+    div(class='signin-form profile')
+      h3 Log in
+      div(class='login-form')
+        form(action='/login' method='post')
+            label(for="email") Email address:<br />
+            input#email(type="text" name="logemail")
+            label(for="password") Password:<br/>
+            input#password(type="password", name="logpassword")
+            div(class='tp')
+              input(type="submit", value="Log in")

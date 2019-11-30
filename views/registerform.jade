@@ -1,0 +1,28 @@
+
+h1 Test Authentication
+// authentication registration form
+div(class="agile")  
+  div(class='signin-form profile')
+    h3 Register
+    div(class='login-form')
+      form#register(action="/register" method="post" onsubmit="event.preventDefault(); validateMyForm();")
+        label(for="email") Email address:<br />
+        input#email(type="text" name="email" required="")
+        label(for="username") User name:<br />
+        input#username(type="text" name="username" required="")
+        label(for="password") Password:<br />
+        input#password(type="password" name="password" required="")
+        label(for="passwordConf") Confirm password:<br />
+        input#passwordConf(type="password" name="passwordConf" required="")
+        input(type="submit" value="Register")
+script(type="text/javascript").
+  var passwordField = document.getElementById('password')
+  var passwordConfirmField = document.getElementById('passwordConf')
+  var form = document.getElementById('register')
+  function validateMyForm(){
+    if(passwordField.value != passwordConfirmField.value) { 
+      alert("Passwords do not match. Please try again.");
+    } else {
+      form.submit()
+    }
+  }

@@ -1,0 +1,10 @@
+extends ./layout
+
+block content
+  main#content
+    h1 This is your profile page
+    ul
+      li User name: #{username}
+      li Email address: #{email}
+    include footer.jade
+
